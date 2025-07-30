@@ -2,14 +2,15 @@ const mongoose = require('mongoose');
 
 const expensesSchema = new mongoose.Schema({
     date: { type: Date, default: Date.now }, //Date of expense
-    description: {type: String, required: true}, //Expense details
-    category: String, // General Category {Assets,Overhead Cost,Liability,Operating Cost,Cost of Goods Sold}
-    type: String, 
+    description: {type: String }, //Expense details
+    category: { type: String }, // General Category {Assets,Overhead Cost,Liability,Operating Cost,Cost of Goods Sold}
+    type: { type: String }, 
     store: String,
     quantity: Number,
     unit: String,
     unitPrice: Number,
-    amount: { type: Number, required: true}
+    totalAmount: { type: Number, required: true },
+    remarks: String
 });
 
 const Expenses = mongoose.model('Expenses', expensesSchema);
