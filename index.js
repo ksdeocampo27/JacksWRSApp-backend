@@ -3,8 +3,8 @@ const cors = require('cors');
 const app = express();
 const mongoose = require('mongoose');
 
-//require('dotenv').config({ path: '.env.prod' }); // if use locally ONLY
-require('dotenv').config(); // will use `.env` locally, and Render’s env vars on deployment
+require('dotenv').config({ path: '.env.dev' }); // if use locally ONLY
+//require('dotenv').config(); // will use `.env` locally, and Render’s env vars on deployment
 
 const uri = process.env.MONGO_URI;
 const PORT = process.env.PORT || 3001;

@@ -9,7 +9,7 @@ const salesSchema = new mongoose.Schema({
   quantity: { type: Number, required: true },
   pricePerUnit: Number, // price per unit for this sale
   totalAmount: { type: Number, required: true },
-  paymentMethod: { type: String, enum: ['Cash', 'Gcash', 'Free', 'Marketing', 'Return'], required: true },
+  paymentMethod: { type: String, enum: ['Cash', 'GCash', 'Free', 'Marketing', 'Return'], required: true },
   status: { type: String, enum: ['Paid', 'Unpaid', 'Free'] },
   customerContainerQty: { type: Number, default: 0 },
   containerIds: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Inventory' }],
