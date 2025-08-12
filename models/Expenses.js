@@ -8,8 +8,8 @@ const expensesSchema = new mongoose.Schema({
     store: String,
     quantity: Number,
     unit: String,
-    unitPrice: Number,
-    totalAmount: { type: Number, required: true },
+    pricePerUnit: Number,
+    totalAmount: { type: Number },
     remarks: String
 });
 
